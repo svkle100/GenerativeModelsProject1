@@ -36,6 +36,3 @@ class BrainSampler(Sampler):
 
     def __len__(self):
         return float('inf')
-
-if __name__ == "__main__":
-    bs = BrainSampler(BrainDataset(["B01", "B07"]), 1)
