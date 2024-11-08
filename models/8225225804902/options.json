@@ -1,0 +1,1 @@
+{"batch_size": 256, "batch_gpu": 256, "train_time": 1000000, "tile_size": 64, "training_brains": ["B01", "B02", "B05", "B07"], "weighting": "by_pixel", "feature_space_dim": 128, "lr": 0.0001, "wd": 1e-06, "mse_weight": 1, "KL_weight": 3}
