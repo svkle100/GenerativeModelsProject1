@@ -3,6 +3,7 @@ import os
 
 import matplotlib.pyplot as plt
 import torch
+from IPython.core.pylabtools import figsize
 
 
 def get_dataset_path():
@@ -16,7 +17,7 @@ def visualize_batch(batch):
     stats = json.load(open(os.path.join(get_dataset_path(), 'stats.json')))
     batch = batch * stats["std"] + stats["mean"]
     batch = batch.clone().detach().cpu().numpy()
-    fig, axs = plt.subplots(1, bs)
+    fig, axs = plt.subplots(1, bs, figsize = [bs * 2, bs])
     for i in range(bs):
         axs[i].axis('off')
         axs[i].imshow(batch[i][0])
